@@ -9,9 +9,13 @@ router.get('/', (req, res) => {
 	res.render('../views/users/index.ejs');
 })
 /*************** NEW USER ROUTE ***************/
-
+router.get('/new', (req, res) => {
+	res.render('../views/users/new.ejs')
+})
 /*************** CREATE ROUTE ***************/
-
+router.post('/', (req, res) => {
+	res.redirect('/users');
+})
 /*************** SHOW ROUTE ***************/
 
 /*************** DESTROY ROUTE ***************/

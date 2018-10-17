@@ -4,6 +4,15 @@
 	<title></title>
 </head>
 <body>
-	<h1>Users - Index</h1>
+	<h1>Users Index Page</h1>
+
+	<ul>
+		<% for (let i = 0; i < users.length; i++) { %>
+			<li><a href="/users/<%=users[i].id%>"> <%=users[i].name%></a></li>
+		<% } %>
+	</ul>
+
+	<a href="http://localhost:3000/users/new">New User</a>
+
 </body>
-</html>
+<html>

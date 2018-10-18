@@ -52,7 +52,16 @@ router.get('/:id/edit', (req, res) => {
 	)
 })
 /*************** DESTROY ROUTE ***************/
-
+router.delete('/:id', (req, res) => {
+	Users.findByIdAndRemove(req.params.id, req.body,
+		(err, deletedUser) => {
+				if(err){console.log('-------------ERROR-------------', err);}
+				else {
+					console.log('----------------DELETED USER-------------', deletedUser);
+					res.redirect('/users');
+				}
+		})
+})
 
 /*************** UPDATE ROUTE ***************/
 

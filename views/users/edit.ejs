@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Edit Individual User Page</h1>
+	<h2><%=user.name%></h2>
+	<h4><%=user.age%></h4>
+
+		<form action="/users/<%=user._id %>?_method=PUT" method="POST">
+			<h2>Edit User Name:</h2> <input type="text" name="name" value="<%=user.name%>"><br>
+			<h2>Edit User Age:</h2> <input type="text" name="age" value="<%=user.age%>"><br>
+				<a href="/users">Edit User</a>
+		</form>
+		<br>
+		<br>
+	<a href="/users">Go back</a>
+</body>
+</html>

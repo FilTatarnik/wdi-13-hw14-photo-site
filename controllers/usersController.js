@@ -24,8 +24,8 @@ router.post('/', (req, res) => {
 	 }else{console.log('-------------CREATED USER-------------', createdUser);
 	}
 			// console.log(createdUser);
-		})
 		res.redirect('/users');	
+		})
 	});
 /*************** SHOW ROUTE ***************/
 router.get('/:id', (req, res) => {
@@ -42,7 +42,6 @@ router.get('/:id', (req, res) => {
 router.get('/:id/edit', (req, res) => {
 	Users.findById(req.params.id,
 		(err, editUser) => {
-			console.log(editUser);
 			if (err){console.log(`---------- ERROR ---------- \n`, err);}
 				else {
 				console.log(`---------- EDIT USER ---------- \n`, editUser);

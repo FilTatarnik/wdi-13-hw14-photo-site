@@ -11,4 +11,18 @@ router.get('/', (req, res) => {
 	})
 });
 
+/*************** NEW USER ROUTE ***************/
+router.get('/new', (req, res) => {
+	res.render('../views/photos/new.ejs')
+})
+
+/*************** SHOW ROUTE ***************/
+
+
+/*************** EDIT ROUTE ***************/
+
+/*************** DESTROY ROUTE ***************/
+
+/*************** UPDATE ROUTE ***************/
+
 module.exports = router;

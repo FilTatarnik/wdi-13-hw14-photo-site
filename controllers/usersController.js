@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
 router.get('/new', (req, res) => {
 	res.render('../views/users/new.ejs')
 })
-/*************** CREATE ROUTE ***************/
+/*************** CREATE USER ROUTE ***************/
 router.post('/', (req, res) => {
 	Users.create(req.body, req.params.id,
 	 (err, createdUser) => {
